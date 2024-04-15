@@ -2,18 +2,24 @@
   "name": "ts-metar-parser",
   "version": "1.0.1",
   "main": "dist/index.js",
-  "module": "index.ts",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "description": "A simple METAR parser",
-  "keywords": ["react", "reactjs", "aviation", "METAR", "parser"],
+  "keywords": [
+    "react",
+    "reactjs",
+    "aviation",
+    "METAR",
+    "parser"
+  ],
   "links": {
     "homepage": "https://github.com/jaredthejellyfish/ts-metar-parser"
   },
   "scripts": {
     "prepublish": "tsc"
   },
-  "type": "module",
-  "types": "dist/index.d.ts"
+  "type": "module"
 }
