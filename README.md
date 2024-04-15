@@ -1,4 +1,4 @@
-# ✈️ TS-METAR Parser
+# ✈️ TS METAR Parser
 
 Parse METAR information into structured TypeScript objects. The structure of the returned object is closely related to the [API response of CheckWX](https://api.checkwx.com/#metar-fields).
 
