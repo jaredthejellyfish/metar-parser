@@ -2,7 +2,7 @@ type MetarObject = {
   raw_text: string;
   raw_parts: string[];
   icao?: string;
-  observed?: Date;
+  observed?: string;
   wind?: {
     degrees: number;
     degrees_from?: number;
@@ -113,10 +113,11 @@ const metarParser = (metarString: string): MetarObject => {
       case 1:
         match = metarPart.match(/^(\d\d)(\d\d)(\d\d)Z$/);
         if (match) {
-          metarObject.observed = new Date();
-          metarObject.observed.setUTCDate(Number(match[1]));
-          metarObject.observed.setUTCHours(Number(match[2]));
-          metarObject.observed.setUTCMinutes(Number(match[3]));
+          const observed = new Date();
+          observed.setUTCDate(Number(match[1]));
+          observed.setUTCHours(Number(match[2]));
+          observed.setUTCMinutes(Number(match[3]));
+          metarObject.observed = observed.toISOString();
           mode = 2;
         }
         break;
